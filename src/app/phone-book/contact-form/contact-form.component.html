@@ -1,0 +1,42 @@
+<div class="form-content">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="firstName"
+        placeholder="First Name"
+        formControlName="firstName">
+    </div>
+    <div class="form-group">
+      <label for="sureName">Sure Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="sureName"
+        placeholder="Sure Name"
+        formControlName="sureName">
+    </div>
+    <div class="form-group">
+      <label for="sureName">Phone</label>
+      <input
+        type="phone"
+        class="form-control"
+        id="sureName"
+        placeholder="Phone"
+        formControlName="phone">
+    </div>
+    <div>
+      <button
+        type="submit"
+        class="btn btn-info mb-3"
+        [disabled]="contactForm.invalid">Add Contact</button>
+      <button
+        type="button"
+        class="btn btn-secondary
+        mb-3 ml-3"
+        (click)="resetForm()">Reset Form</button>
+    </div>
+  </form>
+</div>

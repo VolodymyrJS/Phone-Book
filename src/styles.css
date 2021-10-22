@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: lightslategray !important;
+}
+
+.main {
+  background-color: #fff;
+  border: 1px solid #e3f2fd;
+  padding: 0;
+}
+
+.header {
+  background-color: #e3f2fd;
+}
+
+.form-content {
+  min-height: calc(100vh - 108px);
+  padding-left: 10px;
+}
+
+.list-content {
+  min-height: calc(100vh - 108px);
+  padding-right: 10px;
+}
+
+.list-content .search {
+  margin-top: -48px;
+}
+
+.footer {
+  height: 50px;
+  background-color: #e3f2fd;
+}

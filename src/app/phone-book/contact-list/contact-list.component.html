@@ -1,0 +1,29 @@
+<div class="list-content">
+  <div class="d-flex search">
+    <input
+      class="form-control
+      me-2" type="search"
+      placeholder="Search"
+      aria-label="Search"
+      [(ngModel)]="searchText">
+    <button class="btn btn-outline-info ml-2" type="submit">Search</button>
+  </div>
+  <table class="table mt-5">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Sure Name</th>
+        <th scope="col">Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let contact of contactsList | filter:searchText; let i = index'>
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ contact.firstName }}</td>
+        <td>{{ contact.sureName }}</td>
+        <td>{{ contact.phone }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
